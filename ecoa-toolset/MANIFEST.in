@@ -1,0 +1,5 @@
+# Copyright 2023 Dassault Aviation
+# MIT License (see LICENSE.txt)
+
+include src/ecoa_toolset/generators/types/basic/ECOA.h
+include src/ecoa_toolset/generators/types/basic/ECOA.hpp

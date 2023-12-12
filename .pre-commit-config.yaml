@@ -1,0 +1,105 @@
+# Don't run pre-commit on files with the following extensions
+exclude: (\.(project|cproject|xml|png|jpg|jpeg|ppt|pptx|doc|docx|xls|xlsx|json|yaml|yml|c|cpp|h|hpp|composite|componentType))|(^(ecoa-ihm/.*|framework_tests/.*|Jenkinsfiles/.*))$
+
+repos:
+-   repo: local
+    hooks:
+    -   id: isort
+        name: isort
+        entry: isort
+        args: [
+            "--profile=black",
+            ]
+        language: system
+        types: [python]
+    -   id: black
+        name: black
+        entry: black
+        args: [
+            "--line-length=120",
+            "--target-version=py38"
+            ]
+        language: system
+        types: [python]
+    -   id: flake8
+        name: flake8
+        entry: flake8
+        args: [
+            "--max-line-length=120",
+            "--max-complexity=7",
+            "--max-cognitive-complexity=8",
+            "--extend-ignore=E203,W503",
+            "--extend-exclude=__init__.py",
+            "--count"
+            ]
+        language: system
+        types: [python]
+        require_serial: true
+    -   id: check-case-conflict
+        name: check for case conflicts
+        description: checks for files that would conflict in case-insensitive filesystems.
+        entry: check-case-conflict
+        language: system
+    -   id: check-toml
+        name: check toml
+        description: checks toml files for parseable syntax.
+        entry: check-toml
+        language: system
+        types: [toml]
+    -   id: debug-statements
+        name: debug statements (python)
+        description: checks for debugger imports and py37+ `breakpoint()` calls in python source.
+        entry: debug-statement-hook
+        language: system
+        types: [python]
+    -   id: name-tests-test
+        name: python tests naming
+        description: verifies that test files are named correctly.
+        entry: name-tests-test
+        language: system
+        args: ["--pytest-test-first"]
+        files: (^|/)tests/.+\.py$
+    -   id: end-of-file-fixer
+        name: fix end of files
+        description: ensures that a file is either empty, or ends with one newline.
+        entry: end-of-file-fixer
+        language: system
+        types: [text]
+    -   id: mixed-line-ending
+        name: mixed line ending
+        description: replaces or checks mixed line ending.
+        entry: mixed-line-ending
+        language: system
+        args: ["--fix=lf"]
+        types: [text]
+    -   id: trailing-whitespace
+        name: trim trailing whitespace
+        description: trims trailing whitespace.
+        entry: trailing-whitespace-fixer
+        language: system
+        types: [text]
+    -   id: requirements-txt-fixer
+        name: fix requirements.txt
+        description: sorts entries in requirements.txt.
+        entry: requirements-txt-fixer
+        language: system
+        files: requirements.*\.txt$
+    -   id: no-commit-to-branch
+        name: "don't commit to branch"
+        entry: no-commit-to-branch
+        language: system
+        args: [--branch, master]
+        pass_filenames: false
+        always_run: true
+    -   id: check-added-large-files
+        name: check for added large files
+        description: prevents giant files from being committed.
+        entry: check-added-large-files
+        args: ['--maxkb=1000']
+        language: system
+    -   id: check-ast
+        name: check python ast
+        description: simply checks whether the files parse as valid python.
+        entry: check-ast
+        language: system
+        types: [python]

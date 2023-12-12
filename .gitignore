@@ -1,0 +1,15 @@
+Zone.sav
+*.pyc
+**/__pycache__
+/.mypy_cache/
+*~
+.venv
+venv
+*.egg-info
+*.log
+.coverage
+coverage_html_report
+.pytest_cache
+*.whl
+dist
+build

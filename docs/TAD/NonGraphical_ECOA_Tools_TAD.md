@@ -326,7 +326,7 @@ For the generation, using information stored in the ECOA model, the tool generat
 ![Dataflow between parts schema](images/Figure-30-Dataflow-between-parts-schema.png)
 
 The workflow shows the link between tools. Each tools are connected but independent and must be run by the user. 
-The tool can be run in a command line or with the help of an IHM in the `ecoa_ihm` folder.
+The tool can be run in a command line or with the help of a GUI in the `ecoa_gui` folder.
 An ECOA xml project is mandatory to run each tools. Relative or an absolute path can be given.
 
 ### 2.2 Description of the execution principles of the parts

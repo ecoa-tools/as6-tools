@@ -46,7 +46,7 @@ class PropertiesParser:
                         break
         tmp = {}
         for key, property_value in property_values.items():
-            for component_name in self._ecoa_model.component_names.get(key):
+            for component_name in self._ecoa_model.component_names.get(key, []):
                 k = key + ":" + component_name
                 if property_value[0] == "$":
                     for ci in self._ecoa_model.ecoa_xml_model._components_assembly.values():
@@ -54,6 +54,8 @@ class PropertiesParser:
                             tmp[k] = ci.properties[property_value[1:]]
                 else:
                     tmp[k] = property_value
+            else:
+                tmp[key] = property_value
         property_values = tmp
         return property_values
 

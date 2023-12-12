@@ -13,7 +13,7 @@ if __name__=='__main__':
     root = Tk()
     #root.withdraw()
     # Creation of the main window
-    img_path = r'images/ECOA_Win.png'
+    img_path = r'../images/ECOA_Win.png'
     ecoa_icon_img = ImageTk.PhotoImage(Image.open(img_path))
     create_window(root, "ECOA Tools Launcher", ecoa_icon_img, 900, 550)
     

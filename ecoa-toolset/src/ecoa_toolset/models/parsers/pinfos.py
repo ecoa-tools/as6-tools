@@ -51,7 +51,7 @@ class PinfosParser:
                         break
         tmp = {}
         for key, pinfo_value in pinfo_values.items():
-            for component_name in self._ecoa_model.component_names.get(key):
+            for component_name in self._ecoa_model.component_names.get(key, []):
                 k = key + ":" + component_name
                 if pinfo_value[0] == "$":
                     for ci in self._ecoa_model.ecoa_xml_model._components_assembly.values():
@@ -59,6 +59,8 @@ class PinfosParser:
                             tmp[k] = self._build_path(ci.properties[pinfo_value[1:]], is_private)
                 else:
                     tmp[k] = self._build_path(pinfo_value, is_private)
+            else:
+                tmp[key] = self._build_path(pinfo_value, is_private)
         pinfo_values = tmp
         return pinfo_values
 

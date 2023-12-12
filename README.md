@@ -21,7 +21,7 @@ This repository contains the code source of tools that could be associated to th
     +-- CONTRIBUTING.md           # Environnement and documentation installation
     +-- docs                      # Common documentation for all tools
     +-- ecoa-csmgvt               # Connected System Model Generator and Verification Tool
-    +-- ecoa-ihm                  # Common IHM for all tools
+    +-- ecoa-gui                  # Common GUI for all tools
     +-- ecoa-mscigt               # Module Skeletons and Container Interfaces Generator Tool
     +-- ecoa-toolset              # Common utilities all tools
     +-- framework_tests           # Framework to run multiple tests on the tools

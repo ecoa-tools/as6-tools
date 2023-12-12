@@ -47,19 +47,19 @@ class ECOA_Application(Frame):
         self.exe_process = None
         
         # ECOA images
-        self.ecoa_icon = ImageTk.PhotoImage(Image.open('images/ECOA_Icon.png').resize((100,130)))
-        self.workflow_img = ImageTk.PhotoImage(Image.open('images/Workflow.png').resize((400,360)))
-        self.exvt_icon = ImageTk.PhotoImage(Image.open('images/EXVT_Icon.png').resize((100,70)))
+        self.ecoa_icon = ImageTk.PhotoImage(Image.open('../images/ECOA_Icon.png').resize((100,130)))
+        self.workflow_img = ImageTk.PhotoImage(Image.open('../images/Workflow.png').resize((400,360)))
+        self.exvt_icon = ImageTk.PhotoImage(Image.open('../images/EXVT_Icon.png').resize((100,70)))
         self.exvt_label = 'EXVT - ECOA CHECKER'
-        self.edt_icon = ImageTk.PhotoImage(Image.open('images/EDT_Icon.png').resize((100,70)))
+        self.edt_icon = ImageTk.PhotoImage(Image.open('../images/EDT_Icon.png').resize((100,70)))
         self.edt_label = 'EDT - ECOA EDITOR'
-        self.asctg_icon = ImageTk.PhotoImage(Image.open('images/ASCTG_Icon.png').resize((100,70)))
+        self.asctg_icon = ImageTk.PhotoImage(Image.open('../images/ASCTG_Icon.png').resize((100,70)))
         self.asctg_label = 'ASCTG - ECOA TEST GENERATOR'
-        self.mscigt_icon = ImageTk.PhotoImage(Image.open('images/MSCIGT_Icon.png').resize((100,70)))
+        self.mscigt_icon = ImageTk.PhotoImage(Image.open('../images/MSCIGT_Icon.png').resize((100,70)))
         self.mscigt_label = 'MSCIGT - ECOA SKELETON GENERATOR'
-        self.csmgvt_icon = ImageTk.PhotoImage(Image.open('images/CSMGVT_Icon.png').resize((100,70)))
+        self.csmgvt_icon = ImageTk.PhotoImage(Image.open('../images/CSMGVT_Icon.png').resize((100,70)))
         self.csmgvt_label = 'CSMGVT - ECOA CORK GENERATOR'
-        self.ldp_icon = ImageTk.PhotoImage(Image.open('images/LDP_Icon.png').resize((100,70)))
+        self.ldp_icon = ImageTk.PhotoImage(Image.open('../images/LDP_Icon.png').resize((100,70)))
         self.ldp_label = 'LDP - ECOA ENGINE'
         
         # Creation of the icon on the main window

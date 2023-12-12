@@ -111,7 +111,11 @@ class ECOAXMLModel:
 
     def _set_component_instance_to_component_assembly(self, node, component_name: str) -> None:
         type_name = node.get("componentType")
-        implementation_name = node.getchildren()[0].get("name")
+        node_childs = node.getchildren()
+        if node_childs:
+            implementation_name = node_childs[0].get("name")
+        else:
+            implementation_name = None
         self._components_assembly[component_name].set_component_instance(type_name, implementation_name)
 
     def _get_property_value_from_assembly(self, name) -> str:

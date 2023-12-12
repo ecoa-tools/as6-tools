@@ -17,5 +17,6 @@ sphinx
 sphinx_rtd_theme
 typed-ast
 typing-extensions
+urllib3==1.26.6
 wheel
 xsdata

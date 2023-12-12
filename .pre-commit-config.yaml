@@ -1,5 +1,5 @@
 # Don't run pre-commit on files with the following extensions
-exclude: (\.(project|cproject|xml|png|jpg|jpeg|ppt|pptx|doc|docx|xls|xlsx|json|yaml|yml|c|cpp|h|hpp|composite|componentType))|(^(ecoa-ihm/.*|framework_tests/.*|Jenkinsfiles/.*))$
+exclude: (\.(project|cproject|xml|png|jpg|jpeg|svg|ppt|pptx|doc|docx|xls|xlsx|json|yaml|yml|c|cpp|h|hpp|composite|componentType|md|bat))|(^(ecoa-gui/.*|framework_tests/.*|Jenkinsfiles/.*))$
 
 repos:
 -   repo: local

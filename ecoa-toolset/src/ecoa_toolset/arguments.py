@@ -23,8 +23,7 @@ def check_ecoa_xml(args: List) -> None:
     Returns:
         None
     """
-
-    result = subprocess.run([args.checker, "-p", args.project])
+    result = subprocess.run(args.checker.split() + ["-p", args.project])
     if result.returncode != 0:
         raise Exception("The check of the ECOA XML file : " + args.project + " failed.")
 

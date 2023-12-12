@@ -14,6 +14,7 @@ Copyright 2023 Dassault Aviation
 ## Structure
 
     .
+    +-- CHANGELOG.md         # Changelog
     +-- docs                 # Documentation
         +-- source           # Sphinx documentation
     +-- LICENSE.txt          # License

@@ -617,12 +617,24 @@ At the end of the command, the directory will be overwritten.
   +-- CMakeList.txt
   +-- results.log
 
-Template
-********
+Templates
+*********
 
-The template option allows the personalisation of the generated file header.
-Four template types can be changed : hearder_template.c (for C headers), header_template.cpp (for C++ headers),
-code_template.c (for C source files) and code_template.cpp (for C++ source files).
+The template option allows the personalisation of the generated files (source/header).
+Four template types can be changed:
+
+.. csv-table::
+    :name: Code Generator Template Files
+    :header: "File", "Usage"
+    :widths: auto
+    :delim: :
+    :align: center
+    :width: 66%
+
+    "code_template.c":"Template for generated c source-files"
+    "code_template.cpp":"Template for generated c++ source-files"
+    "header_template.c":"Template for generated c header-files"
+    "header_template.cpp":"Template for generated c++ header-files"
 
 .. note::
     If the template flag is not used, a default template will be generated.
